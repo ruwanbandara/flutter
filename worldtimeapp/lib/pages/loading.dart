@@ -20,13 +20,15 @@ class _LoadingState extends State<Loading> {
           builder: (context, snapshot){
             if(snapshot.hasData){
               final student = snapshot.data;
-              return Text("Name : ${student.name} \ Slill : ${student.skill}");
+              return Text("Name : ${student.name} \n Slill : ${student.skill}");
             }else if(snapshot.hasError){
               return Text(snapshot.error.toString());
             }
             return CircularProgressIndicator();
           },
+
         ),
+
       )
     );
   }

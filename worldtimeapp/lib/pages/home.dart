@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:worldtimeapp/pages/loading.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -19,9 +20,23 @@ class _HomeState extends State<Home> {
               },
               icon: Icon(Icons.edit_location),
               label: Text('Edit Location'),
+
             ),
+            RaisedButton.icon(
+              onPressed: (){
+                Navigator.pushNamed(context, '/Loading');
+              },
+              color: Colors.amberAccent,
+              icon: Icon(Icons.send),
+              label: Text('Http get request'),
+
+            ),
+
+
+
           ],
         ),
+
       ),
     );
   }
